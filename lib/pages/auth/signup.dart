@@ -3,8 +3,8 @@ import 'package:ticktok_clone/constants.dart';
 import 'package:ticktok_clone/widgets/text_input.dart';
 import 'package:get/get.dart';
 
-class LoginPage extends StatelessWidget {
-  LoginPage({Key? key}) : super(key: key);
+class SignupPage extends StatelessWidget {
+  SignupPage({Key? key}) : super(key: key);
   final TextEditingController _emailController = TextEditingController();
   final TextEditingController _passwdController = TextEditingController();
   @override
@@ -20,7 +20,7 @@ class LoginPage extends StatelessWidget {
                 fontSize: 35, color: buttonColor, fontWeight: FontWeight.w900),
           ),
           const Text(
-            'Login',
+            'Sign up',
             style: TextStyle(fontSize: 25, fontWeight: FontWeight.w700),
           ),
           const SizedBox(
@@ -49,7 +49,7 @@ class LoginPage extends StatelessWidget {
           ),
           InkWell(
             onTap: () {
-              print('tap');
+              print('sign up');
             },
             child: Container(
                 margin:
@@ -59,7 +59,7 @@ class LoginPage extends StatelessWidget {
                     color: buttonColor, borderRadius: BorderRadius.circular(5)),
                 child: const Center(
                     child: Text(
-                  'Login',
+                  'Register',
                   style: TextStyle(fontSize: 20, fontWeight: FontWeight.w700),
                 ))),
           ),
@@ -70,15 +70,15 @@ class LoginPage extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               const Text(
-                'Don\'t have an account? ',
+                'Have an account? ',
                 style: TextStyle(fontSize: 10),
               ),
               InkWell(
                 onTap: () {
-                  Get.offAllNamed('/register');
+                  Get.offAllNamed('/login');
                 },
                 child: Text(
-                  'Register',
+                  'Login',
                   style: TextStyle(fontSize: 10, color: buttonColor),
                 ),
               ),
